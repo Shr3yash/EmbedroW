@@ -57,10 +57,10 @@ EmbedroW
   </p>
 </div>
 
-&emsp t-Distributed Stochastic Neighbor Embedding (t-SNE) is a dimensionality reduction technique that is particularly well suited for the visualisation of large datasets. The technique is implementable using Barnes-Hut approximations, allowing it to be used on large real-world datasets. We used it on data sets containing up to 30 million examples.
+###    t-Distributed Stochastic Neighbor Embedding (t-SNE) is a dimensionality reduction technique that is particularly well suited for the visualisation of large datasets. The technique is implementable using Barnes-Hut approximations, allowing it to be used on large real-world datasets. We used it on data sets containing up to 30 million examples.
 [Read More](https://towardsdatascience.com/an-introduction-to-t-sne-with-python-example-5a3a293108d1)
 
-&emsp It is a build-in tool of Google's Machine Learning framework, [TensorFlow](https://tensorflow.org) . This project is all about an implementation of **tool** to use the standalone prototype you can find [here](https://github.com/tensorflow/embedding-projector-standalone)
+####    It is a build-in tool of Google's Machine Learning framework, [TensorFlow](https://tensorflow.org) . This project is all about an implementation of **tool** to use the standalone prototype you can find [here](https://github.com/tensorflow/embedding-projector-standalone)
 
 <!-- TABLE OF CONTENTS -->
 <details>
