@@ -46,14 +46,14 @@ EmbedroW
   <p align="center">
    This project is a tool to setup and utilize the standalone version of Tensorflow Embedding Projector.
     <br />
-    <a href="https://github.com/eSKIMo/blob/main/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/DrCybernotix/EmbedroW/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/eSKIMo/blob/main/README.md">View Demo</a>
+    <a href="https://github.com/DrCybernotix/EmbedroW/blob/main/README.md">View Demo</a>
     ·
-    <a href="https://github.com/DrCybernotix/eSKIMo/issues">Report Bug</a>
+    <a href="https://github.com/DrCybernotix/EmbedroW/issues">Report Bug</a>
     ·
-    <a href="https://github.com/DrCybernotix/eSKIMo/issues">Request Feature</a>
+    <a href="https://github.com/DrCybernotix/EmbedroW/pulls">Request Feature</a>
   </p>
 </div>
 
@@ -94,23 +94,20 @@ EmbedroW
 ## About The Project
 
 
-  Whilst learning tensorflow I stumbled upon the concept of embedding which I found quite interesting and taking the motivation through it, here I tried to create an NLP model that categorises abstract statements according to their function (e.g., objective, techniques, results, etc.) so that researchers can diversify through the literature and dig further in depth when needed.
-
-The problem statement :
-* The number of RCT papers published is growing, and those without organised abstracts can be difficult to read, slowing researchers' progress through the literature.
-
-Solution : 
-* Creation of an NLP model that will do teh work of diversification of the input texts we provide and output the labels those suggest the intuitive information behind those chunks of literature.
-
-Precisely, when we implement this in our own devices We'll be recreating and replicating better version of the deep learning model used in PubMed 200k RCT: a Dataset for Sequential Sentence Classification in Medical Abstracts, which was published in the year 2017.
-
-Link of the paper for reference : <a href="https://arxiv.org/abs/1710.06071" target="_blank">PubMed 200k RCT</a>
+  Whilst learning tensorflow I stumbled upon the concept of embedding which I found quite interesting and taking the motivation through it, here I tried to create an efficient tool that will help you visualize your embeddings moer efficientky using the TF embedding tool. 
+  Certainly for us, there seems to be an excellent tool that is part of Tensorboard.
+This is meant to be used as Tensorboard , but in my opinion, tensorboard is too cumbersome, and unless you are already using Tensorflow, it is too much of a fuss to use.
+As a direct consequence, we can only use the self - contained version. The creators did not appear to have written any documentation for the standalone version, but it is pretty straightforward, and Then I will walk you through the pathways in this editorial.
+  To export data from the model, we wrote a few wrappers. The specifics of the task will be included at the end of the story.
 
 Follow through to get started!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
+Example Output : 
+<p align="center">
+  <img src="https://github.com/DrCybernotix/EmbedroW/blob/main/myLogos/demo.gif?raw=true" alt="Visualising Example"/>
+</p>
 
 ### Built With
 
@@ -121,9 +118,8 @@ This section is the list of any major frameworks/libraries used to bootstrap the
 * [Keras](https://vuejs.org/)
 * [Python3](https://svelte.dev/)
 * [numpy](https://laravel.com)
-* [Matplotlib](https://getbootstrap.com)
-* [Pandas(DF)](https://jquery.com)
-* [Local GPU(For optimum acceleration)](https://angular.io/)
+* [Anaconda(For virtual environment.)](https://jquery.com)
+* [HTML](https://angular.io/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -145,14 +141,18 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install npm@latest -g
   ```
+* opencv-python
+```sh
+pip install opencv-python
+```
 
 ### Installation
 
 Install TensorFlow with pip
-  TensorFlow 2 packages are available
-  * tensorflow —Latest stable release with CPU and GPU support (Ubuntu and Windows)
-  * tf-nightly —Preview build (unstable). Ubuntu and Windows include GPU support.
-  Older versions of TensorFlow
+   TensorFlow 2 packages are available
+     * tensorflow —Latest stable release with CPU and GPU support (Ubuntu and Windows)
+     * tf-nightly —Preview build (unstable). Ubuntu and Windows include GPU support.
+Older versions of TensorFlow
 For TensorFlow 1.x, CPU and GPU packages are separate:
 
   * tensorflow==1.15 —Release for CPU-only
@@ -165,23 +165,30 @@ System requirements
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/DrCybernotix/BlackLabelizer.git
+   git clone https://github.com/DrCybernotix/EmbedroW.git
   
    ```
    
    After cloning just open the project folder in any IDE, (Recommend: Pycharm or Visual Studio)
    Run the test.py first or either you can do this from the terminal.
+   ```shell
+   python launch.py
+   ```
    
    For terminal :
    ```sh
    cd (paste the directory location where you inported the repository)
-   python test py
+   python launch.py
    ```
 2. Install packages
    ```sh
    npm install
    ```
-
+   
+   Now you might have got the output pop-up in your browser, if not copy paste this Port ID in your browser at :  http://localhost:8000,
+   or wahtever the IDE you have run into has output you.(If you have run this project through your defined IDE). Eihter run this command for redirected output through the shell    ```
+   python -m SimpleHTTPServer
+   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -198,6 +205,47 @@ _For more examples, please refer to the (coming soon!) [Documentation](https://e
 
 
 
+#### With sprite:
+
+![](https://github.com/DrCybernotix/EmbedroW/blob/main/myLogos/demoimg.jpg)
+
+#### With label
+
+![](https://github.com/DrCybernotix/EmbedroW/blob/main/myLogos/demoimg1.jpg)
+
+### How to visualize your custom data : 
+The Projector accepts as input a NxD tensor, where N is the number of samples (or embeddings) and D is the dimension of each sample. The tensor is kept in a file (raw float bytes for tsv). A sample is represented as a point on the plot. We can add metadata to a sample, a picture (called asprite, or labels / class id or names ).
+
+A example sprite image:
+
+![](oss_data/images.png)
+
+We designed a method that would handle everything for you; simply call it with your data. BOOM! Tensor is represented as binary bytes.
+
+```
+write_image_embeddings(root, title, feats, labels, imgs, sprite_size)
+'''
+:param root: root dir of `Embedding Project` tool
+:param title: name of the tensor
+:param feats: embedding tensor NxDim
+:param labels: labels for each sample NxNumClasses
+:param [optional] imgs: images in format NHWC
+:param [optional] sprite_size: image sprite size
+:param mode: 'w' -- write, 'w+' -- update or append, '+' -- append
+'''
+```
+
+Now how do you import your tensors in .tsv format? 
+
+```python
+write_tsv_embeddings(prefix, feats, labels=None):
+```
+🔑Note:
+.tsv files can be loaded in the web browser in real time, on-line.
+
+
+This tool features an intuitive way of visualizing any vector array in tensor format using a small dependency stack. It is intended to be independent of any library. Furthermore, it employs a static file system, allowing you to broadcast your findings without the need for a private server.
+
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -208,6 +256,7 @@ _For more examples, please refer to the (coming soon!) [Documentation](https://e
 
 
 See the [open issues](https://github.com/DrCybernotix/BlackLabelizer/issues) for a full list of proposed features (and known issues).
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -243,9 +292,11 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Twitter/Email - [@DrCybernotix](https://twitter.com/DrCybernotix) - 12shreyashh@gmail.com
+Twitter/Email - [@DrCybernotix](https://twitter.com/DrCybernotix)
 
-Project Link: [BlackLabelizer](https://github.com/DrCybernotix/BlackLabelizer)
+12shreyashh@gmail.com
+
+Project Link: [EmbedroW](https://github.com/DrCybernotix/EmbedroW)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -269,16 +320,16 @@ The list of resources I found helpful whilst makingg this project and would like
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/DrCybernotix/BlackLabelizer.svg?style=for-the-badge
-[contributors-url]: https://github.com/DrCybernotix/BlackLabelizer/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/DrCybernotix/BlackLabelizer.svg?style=for-the-badge
-[forks-url]: https://github.com/DrCybernotix/BlackLabelizer/network/members
-[stars-shield]: https://img.shields.io/github/stars/DrCybernotix/BlackLabelizer.svg?style=for-the-badge
-[stars-url]: https://github.com/DrCybernotix/BlackLabelizer/stargazers
-[issues-shield]: https://img.shields.io/github/issues/DrCybernotix/BlackLabelizer?style=for-the-badge
-[issues-url]: https://github.com/DrCybernotix/BlackLabelizer/issues
-[license-shield]: https://img.shields.io/github/license/DrCybernotix/BlackLabelizer.svg?style=for-the-badge
-[license-url]: https://github.com/DrCybernotix/BlackLabelizer/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/DrCybernotix/EmbedroW.svg?style=for-the-badge
+[contributors-url]: https://github.com/DrCybernotix/EmbedroW/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/DrCybernotix/EmbedroW.svg?style=for-the-badge
+[forks-url]: https://github.com/DrCybernotix/EmbedroW/network/members
+[stars-shield]: https://img.shields.io/github/stars/DrCybernotix/EmbedroW.svg?style=for-the-badge
+[stars-url]: https://github.com/DrCybernotix/EmbedroW/stargazers
+[issues-shield]: https://img.shields.io/github/issues/DrCybernotix/EmbedroW?style=for-the-badge
+[issues-url]: https://github.com/DrCybernotix/EmbedroW/issues
+[license-shield]: https://img.shields.io/github/license/DrCybernotix/EmbedroW.svg?style=for-the-badge
+[license-url]: https://github.com/DrCybernotix/EmbedroW/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://in.linkedin.com/in/shreyash-bhatkar-5bb904194
 [product-screenshot]: images/screenshot.png
