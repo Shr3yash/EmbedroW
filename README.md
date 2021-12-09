@@ -113,13 +113,13 @@ Example Output/Standalone :
 
 This section is the list of any major frameworks/libraries used to bootstrap the subsequent project. Leave any add-ons/plugins for the acknowledgements section. Here are a few assets to work with : 
 
-* [Tensorflow](https://nextjs.org/)
-* [Scikitlearn](https://reactjs.org/)
-* [Keras](https://vuejs.org/)
-* [Python3](https://svelte.dev/)
-* [numpy](https://laravel.com)
-* [Anaconda(For virtual environment.)](https://jquery.com)
-* [HTML](https://angular.io/)
+* [Tensorflow](https://www.tensorflow.org/)
+* [Scikitlearn](https://scikit-learn.org/stable/)
+* [Keras](https://keras.io/)
+* [Python3](https://www.python.org/download/releases/3.0/)
+* [numpy](https://numpy.org/)
+* [Anaconda.(For virtual environment)](https://www.anaconda.com/)
+* [HTML](https://en.wikipedia.org/wiki/HTML)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
