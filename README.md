@@ -104,7 +104,7 @@ Follow through to get started!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-Example Output : 
+Example Output/Standalone : 
 <p align="center">
   <img src="https://github.com/DrCybernotix/EmbedroW/blob/main/myLogos/demo.gif?raw=true" alt="Visualising Example"/>
 </p>
