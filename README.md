@@ -37,7 +37,7 @@ EmbedroW
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/DrCybernotix/EmbedroW/blob/main/myLogos/EmbedroW_Logo.png">
+  <a href="https://github.com/DrCybernotix/EmbedroW/blob/main/myLogos/EmbedroW_Logo1.png">
     <img src="myLogos/EmbedroW_Logo.png" alt="Logo">
   </a>
 
