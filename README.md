@@ -91,11 +91,11 @@ EmbedroW
 
 
 <!-- ABOUT THE PROJECT -->
-<p align="center'>
+
           
 ## About The Project
           
-</p>
+
           
 <p align="justify">
                   
