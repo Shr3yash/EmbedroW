@@ -93,13 +93,10 @@ EmbedroW
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-
-  Whilst learning tensorflow I stumbled upon the concept of embedding which I found quite interesting and taking the motivation through it, here I tried to create an efficient tool that will help you visualize your embeddings moer efficientky using the TF embedding tool. 
-  Certainly for us, there seems to be an excellent tool that is part of Tensorboard.
-This is meant to be used as Tensorboard , but in my opinion, tensorboard is too cumbersome, and unless you are already using Tensorflow, it is too much of a fuss to use.
-As a direct consequence, we can only use the self - contained version. The creators did not appear to have written any documentation for the standalone version, but it is pretty straightforward, and Then I will walk you through the pathways in this editorial.
-  To export data from the model, we wrote a few wrappers. The specifics of the task will be included at the end of the story.
-
+<p align="center">
+  Whilst learning tensorflow I stumbled upon the concept of embedding, which I found quite interesting in it's course taking the motivation through it, here I tried to create an efficient tool that will help you visualize your embeddings more efficientky using the TF embedding tool.Certainly for us, there seems to be an excellent tool that is part of Tensorboard. This is meant to be used as Tensorboard , but in my opinion, tensorboard is too cumbersome, and unless you are already using Tensorflow, it is too much of a fuss to use. As a direct consequence, we can only use the self - contained version. The creators did not appear to have written any documentation for the standalone version, but it is pretty straightforward, and Then I will walk you through the pathways in this editorial. To export data from the model, we wrote a few wrappers. 
+  The specifics of the task will be included at the end of the story.
+</p>
 Follow through to get started!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
