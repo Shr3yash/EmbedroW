@@ -189,8 +189,10 @@ System requirements
    npm install
    ```
    
-   Now you might have got the output pop-up in your browser, if not copy paste this Port ID in your browser at :  http://localhost:8000,
-   or wahtever the IDE you have run into has output you.(If you have run this project through your defined IDE). Eihter run this command for redirected output through the shell    ```
+   Now, you might have got the output pop-up in your browser, if not copy paste this Port ID in your browser at :  http://localhost:8000,
+   or wahtever the IDE you have run into has output you.(If you have run this project through your defined IDE). Eihter run this command for redirected output through the shell 
+   
+   ```sh
    python -m SimpleHTTPServer
    ```
 
