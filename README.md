@@ -41,7 +41,7 @@ EmbedroW
     <img src="myLogos/EmbedroW_Logo.png" alt="Logo">
   </a>
 
-  <h3 align="center">A t-SNE projector for higher dimensional data and Word Embeddings</h3>
+  <h3 align="center">A t-SNE projector for higher dimensional data and word embeddings</h3>
 
   <p align="center">
    This project is a tool to setup and utilize the standalone version of Tensorflow Embedding Projector.
