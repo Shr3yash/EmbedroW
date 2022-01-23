@@ -49,7 +49,7 @@ EmbedroW
     <a href="https://github.com/DrCybernotix/EmbedroW/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/DrCybernotix/EmbedroW/blob/main/README.md">View Demo</a>
+    <a href="https://shr3yash.github.io/EmbedroW/">View Demo</a>
     ·
     <a href="https://github.com/DrCybernotix/EmbedroW/issues">Report Bug</a>
     ·
@@ -108,10 +108,6 @@ EmbedroW
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-Example Output/Standalone : 
-<p align="center">
-  <img src="https://github.com/DrCybernotix/EmbedroW/blob/main/myLogos/demo.gif?raw=true" alt="Visualising Example"/>
-</p>
 
 ### Built With
 
@@ -218,6 +214,12 @@ _For more examples, please refer to the (coming soon!) [Documentation](https://e
 #### With label
 
 ![](https://github.com/DrCybernotix/EmbedroW/blob/main/myLogos/demoimg1.jpg)
+
+#### Example Output/Standalone : 
+<p align="center">
+  <img src="https://github.com/DrCybernotix/EmbedroW/blob/main/myLogos/demo.gif?raw=true" alt="Visualising Example"/>
+</p>
+
 
 ### How to visualize your custom data : 
 The Projector accepts as input a NxD tensor, where N is the number of samples (or embeddings) and D is the dimension of each sample. The tensor is kept in a file (raw float bytes for tsv). A sample is represented as a point on the plot. We can add metadata to a sample, a picture (called asprite, or labels / class id or names ).
